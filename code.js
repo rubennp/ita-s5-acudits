@@ -33,7 +33,7 @@ const newJoke = () => {
 
 window.addEventListener('load', () => {
     getWeather().then((ok) => {
-        document.getElementById("temps").innerHTML = `Avui: ${ok}`;
+        document.getElementById("temps").innerHTML = `Avui a Barcelona: ${ok}`;
         console.log(ok);
     });
 });
