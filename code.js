@@ -1,3 +1,5 @@
+let joke;
+
 const getJoke = async () => {
     return await new Promise((resolve, reject) => {
         fetch('https://icanhazdadjoke.com/', {
@@ -11,9 +13,10 @@ const getJoke = async () => {
     });
 };
 
-window.addEventListener('load', () => {
+const newJoke = () => {
     getJoke().then((ok) => {
-        document.getElementById("joke").innerHTML = ok;
-        console.log(ok); 
+        joke = ok;
+        document.getElementById("joke").innerHTML = joke;
+        console.log(joke);
     });
-});
+};
