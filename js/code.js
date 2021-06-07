@@ -26,15 +26,13 @@ const getWeather = async () => {
 
 const newJoke = () => {
     getJoke().then((ok) => {
-        document.getElementById("joke").innerHTML = ok;
-        console.log(ok);
+        document.getElementById("joke").innerHTML = `❝ ${ok} ❞`;
     });
 };
 
 window.addEventListener('load', () => {
     getWeather().then((ok) => {
         document.getElementById("temps").innerHTML = `Avui a Barcelona: ${ok}`;
-        console.log(ok);
     });
 });
 
