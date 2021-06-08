@@ -21,7 +21,7 @@ body article:before {
   opacity: 0.75;
   background-image: url("../img/fons.jpg");
   background-color: white;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,6 +29,7 @@ body #content {
   background: linear-gradient(180deg, white 0%, rgba(9, 9, 121, 0) 100%);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
 }
 body #content .temps-container {
@@ -37,14 +38,21 @@ body #content .temps-container {
   font-size: smaller;
   justify-self: flex-start;
 }
-body #content .temps-container p {
-  margin: 1em;
+body #content .temps-container p:first-of-type {
+  margin: 1rem 1rem 0;
+}
+body #content .temps-container p + p {
+  font-size: 0.4rem;
+  color: rgba(0, 0, 0, 0.25);
+  margin: 0 1rem;
+}
+body #content .temps-container p + p a {
+  color: rgba(0, 0, 0, 0.4);
 }
 body #content .joke-container {
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin: auto 0;
   align-items: center;
   justify-content: space-evenly;
   width: 60%;
@@ -60,10 +68,46 @@ body #content .joke-container span {
 body #content .joke-container p {
   padding: 0 3em;
   font-weight: 600;
+  font-size: 90%;
+}
+@media (max-height: 500px) {
+  body #content .joke-container p {
+    font-size: 75%;
+  }
+}
+body #content .joke-container header #from {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: #aeaeae;
+  text-align: center;
+}
+@media (max-height: 500px) {
+  body #content .joke-container header #from {
+    font-size: 0.7rem;
+  }
+}
+body #content .joke-container header h1 {
+  margin-bottom: 0;
+}
+@media (max-height: 500px) {
+  body #content .joke-container header h1 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  body #content .joke-container {
+    width: 75%;
+  }
+}
+@media (max-height: 500px) {
+  body #content .joke-container {
+    height: 75%;
+  }
 }
 body #content button {
-  height: 10vh;
-  width: 25%;
+  margin-bottom: 1rem;
+  width: 150px;
   height: 50px;
   background-color: #3ED3DD;
   color: white;
@@ -73,6 +117,29 @@ body #content button {
 }
 body #content button:hover {
   cursor: pointer;
+}
+@media (max-height: 500px) {
+  body #content button {
+    padding: 10px;
+    font-size: 3vh;
+    height: fit-content;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+}
+body #content footer p {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  padding-right: 1em;
+  font-size: 0.8rem;
+}
+body #content footer p a {
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-height: 500px) {
+  body #content footer p {
+    font-size: 0.6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
