@@ -9,17 +9,22 @@
 </head>
 <body>
     <main>
-        <article>
-            <div id="content">
+        <article id="content">
                 <div class="temps-container">
                     <p id="temps"></p>
+                    <p>segons <a href="https://api.openweathermap.org" target="_blank">Open Weather</a></p>
                 </div>
                 <div class="joke-container">
-                    <h1>Preparat per riure? &#129315</h1>
+                    <header>
+                        <h1>Preparat per riure? &#129315</h1>
+                        <p id="from"></p>
+                    </header>
                     <p id="joke"></p>
                     <button type="button" onclick="newJoke()">Següent acudit</button>
                 </div>
-            </div>
+                <footer>
+                    <p><a href="https://unsplash.com/photos/MySy-2bd930" target="_blank">Foto</a>: Magdalena Smolnicka</p>
+                </footer>
         </article>
     </main>
     <script src="js/code.js"></script>
